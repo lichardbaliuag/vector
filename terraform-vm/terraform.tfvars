@@ -1,0 +1,8 @@
+resource_group_name         = "vector_terraform_rg"
+resource_group_location     = "Australia East"
+virtual_network_name        = "vnettest1222"
+subnet_name                 = "subnettest1222"
+public_ip_name              = "publicip1222"
+network_security_group_name = "nsgtest1222"
+network_interface_name      = "nictest1222"
+linux_virtual_machine_name  = "linuxvm1222"
