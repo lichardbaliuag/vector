@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [Unit]
 Description=Python Service
 After=multi-user.target
@@ -11,18 +10,4 @@ ExecStart=/bin/sh -c "/usr/bin/python3 /home/azureuser/vector/api.py"
 WorkingDirectory=/home/azureuser/vector
 
 [Install]
-=======
-[Unit]
-Description=Python Service
-After=multi-user.target
-SourcePath=/etc/init.d/api_vector/api
-
-[Service]
-Type=simple
-Restart=always
-ExecStart=/bin/sh -c "/usr/bin/python3 /home/azureuser/vector/api.py"
-WorkingDirectory=/home/azureuser/vector
-
-[Install]
->>>>>>> 59c8f44 (Initial commit)
 WantedBy=multi-user.target
