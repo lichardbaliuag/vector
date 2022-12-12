@@ -1,13 +1,15 @@
 [Unit]
 Description=Python Service
 After=multi-user.target
-SourcePath=/etc/init.d/api_vector/api
 
 [Service]
-Type=simple
-Restart=always
-ExecStart=/bin/sh -c "/usr/bin/python3 /home/azureuser/vector/api.py"
+Type=idle
+Restart=on-failure
+ExecStart=/usr/bin/python3 /home/azureuser/vector/api.py
 WorkingDirectory=/home/azureuser/vector
+Environment="PYTHONPATH=$PYTHONPATH:/home/azureuser/.local/lib/python3.6/site-packages:/usr/lib/python3/dist-packages"
+StandardOutput=/home/azureuser/vector/log1.log
+StandardError=/home/azureuser/vector/log2.log
 
 [Install]
 WantedBy=multi-user.target
