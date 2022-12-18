@@ -13,7 +13,6 @@
 # then sudo systemctl enable api
 # OR
 # use api.service in /etc/systemd/system
-
 # If tmdbv3api installed globally, no need to export Python path
 
 export PYTHONPATH="$PYTHONPATH:/home/azureuser/.local/lib/python3.6/site-packages:/usr/lib/python3/dist-packages"
